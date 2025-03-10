@@ -17,12 +17,6 @@ elif not B:
     print(f"Calculated: Side B = {missLength:.4f}")
 
 elif not C:
-    if type(A) and type(B) != 'int':
-        print("Invalid input.")
-        quit()
-    else: 
-        pass
-
     A, B = int(A), int(B)
     missLength = math.sqrt((A**2) + (B**2))
     print(f"Given Side A = {A}, Side B = {B}")
