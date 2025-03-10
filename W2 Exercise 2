@@ -1,0 +1,25 @@
+import math
+
+rentPeriod = int(input("Rental period (days): "))
+lockerSize = str(input("Size of locker (S,M or L): ")).capitalize() # Must capitalized
+
+# Check locker size and calculate total rental cost (excluding discount)
+if lockerSize == 'S':
+    rentCost = rentPeriod * 1.38
+elif lockerSize == 'M':
+    rentCost = rentPeriod * 4.15
+elif lockerSize == 'L':
+    rentCost = rentPeriod * 10.68
+else:
+    print("Please provide a valid size (S, M or L)")
+
+# Check if rent is at least 180 days and apply discount
+if rentPeriod >= 180:
+    rentCost = rentCost * 0.95
+elif 0 < rentPeriod < 180:
+    pass
+else: 
+    print("ERROR: Renting period must be at least 1")
+    quit()
+
+print(f"For your Locker Size: {lockerSize} and Rental period: {rentPeriod}, your total cost of renting is {round(rentCost, 2)}.")
