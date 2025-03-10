@@ -1,7 +1,7 @@
 import math
 
 rentPeriod = int(input("Rental period (days): "))
-lockerSize = str(input("Size of locker (S,M or L): ")).capitalize() # Must capitalized
+lockerSize = str(input("Size of locker (S,M or L): ")).capitalize() 
 
 # Check locker size and calculate total rental cost (excluding discount)
 if lockerSize == 'S':
